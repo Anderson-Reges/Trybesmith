@@ -1,8 +1,7 @@
 import productsRouter from './products.router';
-
-const bla = '';
+import usersRouter from './users.router';
 
 export {
   productsRouter,
-  bla,
+  usersRouter,
 };
