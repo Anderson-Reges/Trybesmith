@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-shadow */
 import { Pool, ResultSetHeader } from 'mysql2/promise';
 import { Iproduct, ProductId } from '../interfaces/products.interface';
 
@@ -14,7 +13,7 @@ export default class Products {
       'INSERT INTO Trybesmith.products (name, amount) VALUES (?,?)',
       [product.name, product.amount],
     );
-    const [ResultSetHeader] = result;
-    return { id: ResultSetHeader.insertId, ...product };
+    const [rows] = result;
+    return { id: rows.insertId, ...product };
   }
 }
