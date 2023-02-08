@@ -6,6 +6,7 @@ const statusCodes = {
   UNAUTHORIZED: 401,
   NO_CONTENT: 204,
   INTERNAL_ERRO: 500,
+  Unprocessable_Entity: 422,
 };
 
 export default statusCodes;
