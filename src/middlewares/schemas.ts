@@ -40,3 +40,12 @@ export const userSchema = z.object({
     invalid_type_error: '"password" must be a string',
   }).min(8, { message: '"password" length must be at least 8 characters long' }),
 });
+
+export const orderSchema = z.object({
+  productsIds: z.array(z.number(), {
+    required_error: '"productsIds" is required',
+    invalid_type_error: '"productsIds" must be an array',
+  }).nonempty({
+    message: '"productsIds" must include only numbers',
+  }),
+});

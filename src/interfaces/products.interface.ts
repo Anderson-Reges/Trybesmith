@@ -1,3 +1,5 @@
+import { JwtPayload } from 'jsonwebtoken';
+
 export interface Iproduct {
   name: string,
   amount: string,
@@ -8,5 +10,13 @@ export interface ProductId extends Iproduct {
 }
 
 export interface ProductOrder extends ProductId {
-  orderId: number
+  orderId: number | JwtPayload
+}
+
+export interface ProductWithoutId extends Iproduct {
+  orderId: number | JwtPayload
+}
+
+export interface ProductIds {
+  productsIds: Array<number>
 }

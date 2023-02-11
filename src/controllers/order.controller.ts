@@ -16,4 +16,15 @@ export default class OrderController {
       ? res.status(statusCodes.INTERNAL_ERRO).json(data)
       : res.status(statusCodes.OK).json(data);
   };
+
+  public createOrder = async (req: Request, res: Response) => {
+    const loggedUser = req.user;
+    const arrayIds = req.body;
+
+    const { type, data } = await this.orderService.createOrder(arrayIds, loggedUser);
+
+    return type !== null
+      ? res.status(statusCodes.INTERNAL_ERRO).json(data)
+      : res.status(statusCodes.CREATED).json(data);
+  };
 }
