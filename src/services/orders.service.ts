@@ -31,7 +31,6 @@ export default class OrderService {
       };
 
       if (data.orderId === undefined) {
-        console.log('entrei');
         await this.productService.updateProduct(orderId, data.id);
       }
 
