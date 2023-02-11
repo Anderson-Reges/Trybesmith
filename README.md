@@ -33,20 +33,47 @@ Auxiliares:
 ## Executando aplicação
 
 * Para rodar o back-end:
-
-  ```
-  cd api/ && npm start
-  ```
-* Para rodar o front-end:
-
-  ```
-    cd src/ && npm start
-  ```
+> Após ter instalado as dependências acima
+  - Rode `docker exec -it trybesmith bash`
+  - Dentro da `bash` o rode o seguinte comando para ligar o server `npm run dev`
+> Agora é so testar com programas ou browsers os HTTP request que são:
+  - método `POST` endereço `/users` que cria um novo usuario recebendo:
+    EX: ```json
+      {
+	      "username": 'Blue Pen',
+	      "vocation": "Bardo",
+	      "level": 999,
+	      "password": "12345678"
+       }
+    ```
+  - método `POST` endereço `/login` a qual faz um login recebe um json:
+    EX: ```json
+      {
+	      "username": "reigal",
+	      "password": "1dragaonoceu"
+      }
+    ``` 
+  - método `POST` endereço `/products` a qual recebe um json com o produto para criar:
+    EX: ```json
+      {
+	      "name": "Sheild",
+	      "amount": "15 peças de ouro"
+      }
+    ```
+    ⚠ Atenção ⚠: para o método `POST` endereço `/orders` funcionar, precisa do token de Autorização gerado ao fazer login ou criar um usuário
+  - método `POST` endereço `/orders` a qual recebe um json com a order para criar:
+    EX: ```json
+      {
+	      	"productsIds": [1,2]
+      }
+    ```
+  - método `GET` endereço `/orders` lista todas as orders do banco.
+  - método `GET` endereço `/products` lista todas os produtos do banco.
 
 ## Executando Testes
 
 * Para rodar todos os testes:
 
   ```
-    npm test
+    npm run test
   ```
