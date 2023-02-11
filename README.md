@@ -34,9 +34,12 @@ Auxiliares:
 
 * Para rodar o back-end:
 > Após ter instalado as dependências acima
+
   - Rode `docker exec -it trybesmith bash`
   - Dentro da `bash` o rode o seguinte comando para ligar o server `npm run dev`
-> Agora é so testar com programas ou browsers os HTTP request que são:
+ 
+> Agora é so testar com programas ou browsers, os HTTP request que são:
+
   - método `POST` endereço `/users` que cria um novo usuario recebendo:
     EX: 
     ```json
