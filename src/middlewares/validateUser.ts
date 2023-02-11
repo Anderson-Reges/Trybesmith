@@ -1,11 +1,11 @@
 import { NextFunction, Response, Request } from 'express';
 import statusCodes from '../statusCodes';
-import { productSchema } from './schemas';
+import { userSchema } from './schemas';
 
-const validateProductValues = (req: Request, res: Response, next: NextFunction) => {
+const validateNewUser = (req: Request, res: Response, next: NextFunction) => {
   const productValues = req.body;
 
-  const data = productSchema.safeParse(productValues);
+  const data = userSchema.safeParse(productValues);
 
   if (!data.success) {
     const { message } = data.error.issues[0];
@@ -17,4 +17,4 @@ const validateProductValues = (req: Request, res: Response, next: NextFunction) 
   next();
 };
 
-export default validateProductValues;
+export default validateNewUser;
