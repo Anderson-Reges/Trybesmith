@@ -81,6 +81,12 @@ Auxiliares:
 
 * Para rodar todos os testes:
 
-  ```
+ ```
     npm run test
-  ```
+ ```
+  
+* Ou rode um test especifico com:
+
+```
+    npm run test
+```
