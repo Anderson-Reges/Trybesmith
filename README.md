@@ -88,5 +88,6 @@ Auxiliares:
 * Ou rode um test especifico com:
 
 ```
-    npm run test
+   //exemplo
+    npm run test 01
 ```
