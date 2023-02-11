@@ -38,7 +38,8 @@ Auxiliares:
   - Dentro da `bash` o rode o seguinte comando para ligar o server `npm run dev`
 > Agora é so testar com programas ou browsers os HTTP request que são:
   - método `POST` endereço `/users` que cria um novo usuario recebendo:
-    EX: ```json
+    EX: 
+    ```json
       {
 	      "username": 'Blue Pen',
 	      "vocation": "Bardo",
@@ -47,14 +48,16 @@ Auxiliares:
        }
     ```
   - método `POST` endereço `/login` a qual faz um login recebe um json:
-    EX: ```json
+    EX: 
+    ```json
       {
 	      "username": "reigal",
 	      "password": "1dragaonoceu"
       }
     ``` 
   - método `POST` endereço `/products` a qual recebe um json com o produto para criar:
-    EX: ```json
+    EX: 
+    ```json
       {
 	      "name": "Sheild",
 	      "amount": "15 peças de ouro"
@@ -62,7 +65,8 @@ Auxiliares:
     ```
     ⚠ Atenção ⚠: para o método `POST` endereço `/orders` funcionar, precisa do token de Autorização gerado ao fazer login ou criar um usuário
   - método `POST` endereço `/orders` a qual recebe um json com a order para criar:
-    EX: ```json
+    EX: 
+    ```json
       {
 	      	"productsIds": [1,2]
       }
